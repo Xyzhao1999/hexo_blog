@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/fancybox@3/dist/css/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://blog.xyzhao.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.0',
+    exturl: true,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":true,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: true,
+    lazyload: false,
+    pangu: true,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="xyzhao@xyzhao.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Xyzhao&#39;s Blog">
+<meta property="og:url" content="https://blog.xyzhao.com/index.html">
+<meta property="og:site_name" content="Xyzhao&#39;s Blog">
+<meta property="og:description" content="xyzhao@xyzhao.com">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Xyzhao">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.xyzhao.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>Xyzhao's Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c28394a8b5989f71d683dc081089bc6a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta custom-logo">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xyzhao's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Lazy Coding</p>
+      <a>
+        <img class="custom-logo-image" src="https://q1.qlogo.cn/g?b=qq&k=Tx3jibUhOLyoia5KnenWd0Xw&s=100" alt="Xyzhao's Blog">
+      </a>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.xyzhao.com/2020/02/05/Translate-Space-variant-blur-kernel-estimation-and-image-deblurring-through-kernel-clustering/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xyzhao">
+      <meta itemprop="description" content="xyzhao@xyzhao.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xyzhao's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/05/Translate-Space-variant-blur-kernel-estimation-and-image-deblurring-through-kernel-clustering/" class="post-title-link" itemprop="url">[文献翻译] Space-variant blur kernel estimation and image deblurring through kernel clustering</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-05 18:16:59 / 修改时间：19:57:23" itemprop="dateCreated datePublished" datetime="2020-02-05T18:16:59+08:00">2020-02-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CS/" itemprop="url" rel="index">
+                    <span itemprop="name">CS</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/02/05/Translate-Space-variant-blur-kernel-estimation-and-image-deblurring-through-kernel-clustering/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/05/Translate-Space-variant-blur-kernel-estimation-and-image-deblurring-through-kernel-clustering/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>15k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>14 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="翻译-基于核聚类的空变模糊核估计以及图像去模糊">翻译 基于核聚类的空变模糊核估计以及图像去模糊</h1>
+<h2 id="摘要">摘要</h2>
+<p>本文提出了一种空变模糊核估计以及图像去模糊的框架。对于空变模糊核估计，本文将输入图像分成多个小块，对于每个小块，模糊核是可以估计的。接着将估计出的核进行分类以确定图像中不同的内核簇。在聚类过程中，不可靠的模糊核将被淘汰。每个内核簇的模糊核最后将使用对应的图像区域进行优化，该图像区域为与集群中内核相关的图像块的并集。对于空变图像去模糊，将整个图像与每个模糊核进行反卷积以生成一组去模糊图像。然后将这些图像融合成无模糊图像，融合过程会从去模糊图像集中选取最佳区域。</p>
+<h2 id="关键字">关键字</h2>
+<p>空变图像去模糊；空变点扩散函数(PSF)估计；图像融合</p>
+<h1 id="介绍">1. 介绍</h1>
+<p>在很多成像应用中，所记录的图像是能够理想化表示场景的真实图像的模糊版本。导致模糊的常见原因有大气畸变、光学像差、传感器上像素点的平均以及相机和目标物体间的运动。图像恢复的目的是从一张或一组图像中恢复出真实图像。恢复问题往往是不适定的，需要通过正则化来为恢复后图像增加一些所需的属性。<br />
+大多解决图像去模糊问题的算法都假设退化过程涉及线性(平移)不变模糊核，即点扩散函数(PSF)。当点扩散函数未知时，该问题被称为盲图像反卷积。今年，可以处理大移动造成的模糊的非常成功的盲图像反卷积技术已经开发出来。然而，一般来说整个图像被单个点扩散函数模糊的假设是无效的。例如，当相机抖动（即空间变化的运动模糊）或景深相对狭窄（即空间变化的离焦模糊）时，场景中会产生不可忽视的深度变化导致空变模糊。由于相机或场景的旋转导致的模糊是另一种空变模糊。对于深度变化导致的空变模糊，模糊核会因不同的区域深度而缩放。对于旋转导致的模糊，可对模糊核进行参数化建模。通常，场景会是动态的，除了大气畸变、深度变化和光学像差外，还有对象的独立运动。因此，处理任意类型的空变模糊核是有必要的。这是一个具有挑战性的任务，需要对图像的模糊区域进行显式或隐式的分割。<br />
+本文提出了一种不受参数核限制的盲空变去模糊框架。我们的策略有以下主要步骤：粗略估计小图像块的模糊核；通过核聚类以确定场景中的重要模糊；使用图像区域及其对应内核簇优化内核；最后通过核估计和图像融合进行反卷积以进行时变去模糊。在此框架内，特定的方法（例如模糊核估计、聚类以及图像融合）可以改变。<br />
+在第2章中，我们介绍了文献中的相关工作。在第3章，我们详细介绍该框架以及每步中的特殊方法。我们在第4章中提供了实验结果，第5章讨论了参数的选择以及其计算复杂度，最后在第6章总结全文。</p>
+<h1 id="相关工作">2.相关工作</h1>
+<p>在本此工作中，我们在解决单幅图像的盲去模糊问题，其中的卷积核是时变的且没有任何的特殊参数来源。因为我们的方法在局部区域使用了空间不变的盲去模糊方法，所以我们先简要回顾一下此类技术，主要是模糊核不受限于参数的技术。<br />
+一种常见的空间不变模糊类型是由于曝光期间相机的抖动而引起的运动模糊。文献[7]中的方法需要用户选取一个并未饱和的矩形块并初步猜测模糊卷积核的方向（水平或垂直）。优化过程基于<strong>贝叶斯框架</strong>，其中清晰图像的先验是梯度图像的高斯混合，模糊核的先验是指数分布的混合，该框架可以提高核系数的稀疏性。在文献[8]中，模糊核的模型也是指数分布的，但清晰图像的模型是全局先验和局部先验的乘积。全局先验是通过连接两个（线性（一次）或二次）的函数，在对数空间内对图像梯度分布进行建模来定义的。局部先验是通过高斯分布中模糊图像和非模糊图像间的梯度差异来定义的。该方法需要对模糊核进行初步估算，其可以是由用户给出。<br />
+上述方法需要用户输入模糊核的估计初始值。也可以使用真实（未模糊）图像来进行初值估计。在文献[9]中，通过使用边缘检测器找到边缘的位置与方向，再沿着边缘轮廓传播局部最大和最小像素值来形成图像的锐利边缘，从而可以预测一张模糊图像的“锐利”版本。预测出锐化图像后，便可在贝叶斯框架下使用高斯先验，通过核梯度和噪声项进行核估计。在文献[10]中，通过应用双边滤波，冲击滤波和梯度幅度阈值估计来消除估计中的小梯度，从而预测出初始的非模糊图像。通过L2正则化约束的最小二乘法可以迭代更新内核和清晰图像。在迭代过程中，梯度幅度阈值会被降低以期在估计中包含更多的梯度值。文献[11]中的方法的第一步也是使用带有冲击滤波器的尖锐边缘构造，选择有效边缘，并使用最小二乘法进行粗略的核估计。第二步是使用选定的区域和L1正则化来细化粗核估计。最后，使用全变分（TV)——L1方法对图像进行反卷积。除了使用稀疏性促进全变分和L1范数正则化外，文献[12]中还探讨了使用框架（framelets，用于图像）和曲线（curvelets，用于模糊核）等的使用。文献[13-15]中还有一些在不同模糊条件下的多张图片的空间不变盲图像去模糊的方法。<br />
+除了将相机抖动建模为二维平面运动外，还可以使用三维相机运动模型。文献[16]中考虑了相机围绕其光学中心的三维旋转（旋转、俯仰和偏航（左右））引起的空间变化模糊问题。参数化模糊模型被视为从三维旋转中<strong>单应性</strong>变换得到的线性组合，其用近似边缘化和最大后验方法来处理模糊图像。除了三维旋转外，文献[17]中还使用滚动（Z轴旋转）和面内（XY）平移的方式。在文献[2]中，不再是将单应性用于锐利图像，而是对单像素网格点进行单应性变换以得到基础模糊核。在此基础上可以对内核进行线性组合以生成由于相机抖动产生的空间变化模糊，从而产生有效的算法。还有基于硬件的方法，文献[18]中使用了智能手机中内置的惯性传感器（陀螺仪传感器）用于精确的模糊核估计。<br />
+文献[19]中考虑了旋转模糊。首先预测旋转物体或相机所产生的<strong>透明度贴图</strong>；然后使用透明度贴图估算其旋转运动的参数。文献[20]中提出了另一种基于透明度的方法，其使用文献[7]中的方法获得模糊区域的模糊核，然后使用Richardson–Lucy算法对其进行反卷积。<br />
+一些空变去模糊方法局限于离焦模糊，即其内核形状是固定的，但其尺度随深度而变化。文献[21]中匹配了具有相似内容但离焦模糊程度不同的图像块；对于具有相似内容的图像块，同伙使用离焦模糊较少的图像块对具有较多离焦模糊的图像块进行去模糊。该方法要求柑橘离焦量对输入图像进行分割，离焦量是通过优化确定高斯核的比例来决定的。在文献[22]中，首先通过局部对比度测量以完成分割，然后使用马尔可夫随机场传播和图分割技术对深度图进行细化。文献[23]使用局部对比度测量引导滤波生成模糊图[模糊映射？]（即高斯核尺度图[高斯核尺度映射？]）；然后使用L1-L2优化，用不同的高斯核对输入图像进行去模糊，以获得多个去卷积图像，最后使用模糊图将他们合并成单个图像。文献[24]中给出了另一种方法，该方法使用局部方差进行尺度估计，并使用<strong>截断约束的最小二乘法</strong>来完成恢复。结果表明，模糊核尺度识别是空变离焦去模糊的关键部分。文献[25]中的研究还表明，使用编码孔径代替传统的全开放孔径，可以提高<em>尺度</em>识别的性能。<br />
+有一些方法是根据模糊线索对图像进行第一次分割。文献[26]中依据局部功率谱、梯度直方图、最大饱和度和局部自相关等特征，使用贝叶斯分类器分割出图像的清晰、线性运动模糊和离焦模糊区域。文献[27]中使用了子带分解获得的特征进行分割，这些特征揭示了小邻域被候选模糊核模糊的可能性，这仅限于特定长度的水平和垂直盒式滤波器。文献[28]假设在非模糊背景中存在单个模糊物体，且其沿某一方向匀速运动。首先基于图像的导数对图像进行分割，确定模糊区域中核的大小与方向，最后使用Richardson-Lucy算法对模糊区域进行反卷积。文献[3]提到了在期望最大化框架中显示提取深度图、参数模糊核估计以及每个深度的反卷积。在文献[29]中，清晰图像和运动方向同时通过TV-L1模型进行估计。运动流估计的正则化结合了边缘图，因此可以保持清晰的运动边界。局部模糊核定义为线性核，其方向和长度由运动流确定。<br />
+基于块的核估计和去模糊也是一种可行的办法。文献[30]中首先估计了局部区域的内核。其假定相邻的内核间具有相似的模糊结构。EMD距离(Earth mover's distance)用于测量内核块之间的相似性。最后，正确的内核不变，错误的内核被替换为相邻的内核。文献[31]中使用了双边滤波和冲击滤波来估计清晰图像；估计局部模糊核的同时提高相邻内核间的平滑度；识别出不良的内核估计值并用相邻内核替换。文献[32]中利用对应图像区域的信息及其与相邻内核的关联性，对初始局部模糊内核估计值进行了修正。<br />
+近来，一些方法中将卷积神经网络(CNNs)用于动态场景的去模糊中，如文献[5,33]。文献[33]将模糊的输入图像划分为一组重叠的块，然后使用CNN在块级预测运动模糊核。为了学习预测运动分布的有效特征，该方法通过离散化运动空间，即运动矢量的长度和方向的范围，产生一组候选的运动核。最后，使用马尔科夫随机场模型，将块级运动核融合到图像的密集运动核场中。该模型可确保为每个像素通过CNN估计得到具有较高置信度的运动核，并且可以提高附近运动核的平滑度。在文献[5]中，为了避免阐释与核估计相关的人工痕迹，模糊数据集的生成和清晰图像的估计均采用了无模糊核的方法。为了模拟模糊过程，该方法使用高速摄像机连续拍摄清晰帧，然后随时间进行合并。为了直接从模糊输入中恢复清晰图像，其提出了一种多尺度损失的CNN模型。在多尺度损失方法中，每个中间输出都是所对应尺度的清晰图像，因此大大提高了收敛性。这些基于学习的方法可以处理多种类型的模糊，但其有效性在很大程度上取决于训练数据的多样性和模型拟合的成功与否。<br />
+在本文中，我们提出了一种但图像盲反卷积框架，其中的模糊是空变的、非参数的。其对图像中的模糊核没有类型和数量的限制。该算法能有效的识别模糊核，并使用均值漂移聚类将图像划分为均匀的模糊区域，最终通过图像去模糊和融合产生清晰的图像。该框架的初步版本已作为会议论文发布，见文献[34]。本文对该方法做了实质性的改进，包括改进的核估计方法和更好的聚类方法(使用均值漂移聚类代替K均值聚类，因为后者需要用户输入聚类个数)。我们将提出的方法与文献[34]中的方法进行了比较，并提供了与文献中其他知名方法的视觉和定量比较。</p>
+<h1 id="模糊核估计和去模糊框架">3.模糊核估计和去模糊框架</h1>
+<p>我们提出的框架有三个主要步骤：(1) 图像块模糊核估计；(2) 使用核聚类以优化模糊核；以及(3) 通过图像融合进行空变去模糊。图1给出了这些步骤的说明。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634917_20200202164546749_325.png" alt="图 1 对提出的空变去模糊框架的说明。对于每个图像块B_p，可以估计其模糊核k_p。然后将内核聚类以确定主簇C_i。便可获得核簇的对应图像区域{\hat{B}}_i。对于每个图像区域{\hat{B}}_i的内核{\hat{k}}_i进行精确估计。使用每个内核对整个输入图像进行去模糊以获得一组去模糊图像{\hat{I}}_i。然后对去模糊图像进行融合以生成清晰图像I。" /></p>
+<h2 id="图像块模糊核估计">3.1 图像块模糊核估计</h2>
+<p>第一步是为了估计输入图像中的局部模糊核。为了估计像素所在处的局部模糊核，这里选择了像素周围的一个小区域，采用空间不变的模糊核估计方法。在我们的方法中，我们采用了文献[10]中提出的粗模糊核估计方法，该方法可以合理快速的以可接受的精度计算模糊核。该方法被用于每个图像块<span class="math inline">\(B_p\)</span>(来自模糊输入图像<span class="math inline">\(B\)</span>)以获得清晰图像<span class="math inline">\(I_p\)</span>和模糊核<span class="math inline">\(k_p\)</span>。每个图片块不必是重叠的；我们使用滑动窗口的方法，步长为图像块大小的四分之一。</p>
+<h2 id="使用核聚类以优化模糊核">3.2 使用核聚类以优化模糊核</h2>
+<p>从图像块估计的局部模糊核并不一定都是准确可靠的。一些图像块可能来自于存在多种内核的过渡区域；一些图像块可能来自于纹理强度不足以产生精确核估计的区域。我们提出对估计的模糊核进行聚类，以确定图像中的主要模糊，并舍弃掉不可靠的核。核聚类后，对应的图像块与特定的内核簇相组合以形成该聚类的较大区域。使用较大的区域可以获得更准确的内核估计。<br />
+在没有图像模糊核数量的先验知识的情况下，我们使用文献[35]中提出的均值漂移聚类方法。聚类过程从内核空间中随机选择的点开始。平方和之差小于固定带框的内核估计值将加入到簇中。随着新的点的加入，簇的质心(centroid)得以更新。随着质心的更新，新的点被加入到簇中，然后重复该过程直到收敛。最后，如果两个簇的质心之间的距离小于带宽的一半，则检查这些簇能否合并。具有均匀模糊核和足够的内部纹理有望产生良好的核估计；因此它们也更有可能形成可靠的集群。具有不均匀模糊或纹理不足的图像块的核估计一般较差，且不会与主簇聚合。<br />
+一旦获得了簇，便可通过组合聚类中与其核对应的图像块，将图像分割成具有均匀模糊的区域。为了产生更准确的结果，我们重新估计了新的图像区域组合<span class="math inline">\(\hat{B}_{i}\)</span>的核<span class="math inline">\(\hat{k}_{i}\)</span>。为了完善内核，我们测试了文献[10]和[11]中介绍的方法。文献[11]中的方法比文献[10]中的方法需要更高的计算成本，但产生了更好的结果。(有关内核估计器的实现细节，请参阅文献[10]、[11]。)<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634918_20200202164654705_3482.png" alt="图 2 模糊核估计和聚类。从左往右依次为原始图像、图像块估计的内核、内核聚类后的图像区域及其对应的优化后的内核。图像块大小和内核窗口大小在所有实验中都是固定的，因此，可以根据图像大小获得不同数量的内核。输入图像核内核簇均被缩放以适合对应图像。" /><br />
+在图2中，我们提供了一组实验中使用的输入图像。该图包括内核簇的对应区域和精确的内核估计值<span class="math inline">\(\hat{k}_{i}\)</span>。图像块大小和内核窗口大小在所有实验中都是固定的，因此，根据输入图像的大小可以获得不同数量的内核。（这些参数的值在第4章中给出）</p>
+<h2 id="通过图像融合进行空变去模糊">3.3 通过图像融合进行空变去模糊</h2>
+<p>聚类过程使得一些核及其对应的区域未被分配。这些未分配的块是已知的优化后内核区域的扩展，最后应当加以注意。我们的方法是对每个优化后的内核<span class="math inline">\(\hat{k}_{i}\)</span>的整个输入图像<span class="math inline">\(B\)</span>进行去模糊处理，以获得一组去模糊图像<span class="math inline">\(\hat{I}_{i}\)</span>，并使用图像融合过程，在来自去模糊图像<span class="math inline">\(\hat{I}_{i}\)</span>选择在像素位置的最佳像素值，从而产生清晰的图像。<br />
+对于图像反卷积，我们使用的是文献[36]中基于TV-L1的方法，该方法可以最小化以下成本函数<span class="math inline">\(\left\|B-\hat{k}_{i} \otimes \hat{I}_{i}\right\|_{1}+\lambda\left\|\nabla \hat{I}_{i}\right\|_{2}\)</span>，其中<span class="math inline">\(\lambda\)</span>为正则化常数。<br />
+对于融合过程，在每个像素位置都从其中一个去模糊图像中选择一个像素值。该选择基于以下观察：在恢复的图像<span class="math inline">\(\hat{I}_{i}\)</span>中，对于所应用的内核正确的区域，可以实现平滑恢复；而图像的其他部分会产生严重的振铃效应(ringing artifacts)，因为这些区域无法由该内核解释。与自然图像的梯度相比，这些振铃及其强烈，一般具有很大的梯度。这一信息 在文献[25]中曾用于确定模糊核离焦深度的比例。除了自然图像中梯度的稀疏分布外，我们还在融合过程中使用了该信息。在我们的实现中，从去模糊图像中选择一个像素，该去模糊图像在该像素周围的局部窗口中产生最小能量。能量最小化函数定义为：<br />
+<span class="math display">\[\sum_{(x, y) \in W}\left|B(x, y)-\hat{k}_{i} \otimes \hat{I}_{i}(x, y)\right|^{2}+\alpha\left|\nabla \hat{I}_{i}(x, y)\right|\]</span><br />
+其中<span class="math inline">\((x, y)\)</span>表示像素位置，<span class="math inline">\(W\)</span>表示该像素所在的局部窗口，<span class="math inline">\(\alpha\)</span>是正则化常数。</p>
+<h1 id="实验结果">4. 实验结果</h1>
+<p>我们在各种不同类型的空变模糊导致退化的图像上测试了所提出的框架。并与这些可以处理空变模糊的方法进行了比较：<br />
+* Joshi 等 (2010) [4]<br />
+* Hirsch 等 (2011) [2]<br />
+* Shen 等 (2012) [23]<br />
+* Hu 等 (2014) [3]<br />
+* Qian 等 (2014) [34]<br />
+* Sun 等 (2015) [33]<br />
+* Nah 等 (2017) [5]<br />
+* Shen 等 (2018) [30]<br />
+我们在图3-10中提供了视觉比较。在表1中，我们使用了文献[6]中提供的数据集进行了定量比较。</p>
+<table>
+<tr>
+<td>
+Image name
+</td>
+<td colspan="2">
+Sun et al.[33]
+</td>
+<td colspan="2">
+Nah et al.[5]
+</td>
+<td colspan="2">
+Proposed
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+PSNR
+</td>
+<td>
+SSIM
+</td>
+<td>
+PSNR
+</td>
+<td>
+SSIM
+</td>
+<td>
+PSNR
+</td>
+<td>
+SSIM
+</td>
+</tr>
+<tr>
+<td>
+Manmade 01
+</td>
+<td>
+17.51
+</td>
+<td>
+0.75
+</td>
+<td>
+16.54
+</td>
+<td>
+0.71
+</td>
+<td>
+18.41
+</td>
+<td>
+0.79
+</td>
+</tr>
+<tr>
+<td>
+Manmade 02
+</td>
+<td>
+14.16
+</td>
+<td>
+0.61
+</td>
+<td>
+14.15
+</td>
+<td>
+0.59
+</td>
+<td>
+15.62
+</td>
+<td>
+0.67
+</td>
+</tr>
+<tr>
+<td>
+Manmade 03
+</td>
+<td>
+16.82
+</td>
+<td>
+0.72
+</td>
+<td>
+18.12
+</td>
+<td>
+0.77
+</td>
+<td>
+21.25
+</td>
+<td>
+0.87
+</td>
+</tr>
+<tr>
+<td>
+Manmade 04
+</td>
+<td>
+16.72
+</td>
+<td>
+0.71
+</td>
+<td>
+19.33
+</td>
+<td>
+0.80
+</td>
+<td>
+20.16
+</td>
+<td>
+0.84
+</td>
+</tr>
+<tr>
+<td>
+Natural 01
+</td>
+<td>
+20.42
+</td>
+<td>
+0.87
+</td>
+<td>
+20.62
+</td>
+<td>
+0.87
+</td>
+<td>
+20.26
+</td>
+<td>
+0.86
+</td>
+</tr>
+<tr>
+<td>
+Natural 02
+</td>
+<td>
+17.77
+</td>
+<td>
+0.79
+</td>
+<td>
+18.35
+</td>
+<td>
+0.81
+</td>
+<td>
+19.61
+</td>
+<td>
+0.84
+</td>
+</tr>
+<tr>
+<td>
+Natural 03
+</td>
+<td>
+18.82
+</td>
+<td>
+0.83
+</td>
+<td>
+19.41
+</td>
+<td>
+0.85
+</td>
+<td>
+23.09
+</td>
+<td>
+0.93
+</td>
+</tr>
+<tr>
+<td>
+Natural 04
+</td>
+<td>
+19.20
+</td>
+<td>
+0.83
+</td>
+<td>
+19.98
+</td>
+<td>
+0.86
+</td>
+<td>
+20.14
+</td>
+<td>
+0.86
+</td>
+</tr>
+<tr>
+<td>
+People 01
+</td>
+<td>
+31.48
+</td>
+<td>
+0.96
+</td>
+<td>
+32.29
+</td>
+<td>
+0.95
+</td>
+<td>
+31.09
+</td>
+<td>
+0.96
+</td>
+</tr>
+<tr>
+<td>
+People 02
+</td>
+<td>
+27.36
+</td>
+<td>
+0.91
+</td>
+<td>
+28.01
+</td>
+<td>
+0.91
+</td>
+<td>
+27.44
+</td>
+<td>
+0.92
+</td>
+</tr>
+<tr>
+<td>
+People 03
+</td>
+<td>
+31.02
+</td>
+<td>
+0.95
+</td>
+<td>
+31.11
+</td>
+<td>
+0.94
+</td>
+<td>
+34.10
+</td>
+<td>
+0.98
+</td>
+</tr>
+<tr>
+<td>
+People 04
+</td>
+<td>
+31.10
+</td>
+<td>
+0.95
+</td>
+<td>
+31.99
+</td>
+<td>
+0.95
+</td>
+<td>
+32.37
+</td>
+<td>
+0.96
+</td>
+</tr>
+<tr>
+<td>
+Average
+</td>
+<td>
+21.86
+</td>
+<td>
+0.82
+</td>
+<td>
+22.49
+</td>
+<td>
+0.83
+</td>
+<td>
+23.62
+</td>
+<td>
+0.87
+</td>
+</tr>
+</table>
+<p>我们所提出的方法有几个参数需要进行设置。其中之一是图像块的大小。图像块大小应当仔细选择；且应当大于模糊核的大小。一方面，当图像块选择过大时，该区域中可能包含多种类型的模糊，这将降低核估计的准确性。另一方面，过小的图像块可能因为纹理不足而无法准确估计。在我们的所有实验中，图像块的大小被设置为312x208，这是我们最初使用进行实验的六分之一。在第5章，我们提供了有关图像块大小对实验结果的影响。<br />
+弄一个参数是滑动窗口中用于获取局部图像块的步长。如果使用步长为一个像素的滑动窗口，则由于要估计图像中每个可能的图像块，计算成本将达到最大。如果使用不重叠的图像块，则可能丢失均匀模糊的区域。在我们的实验中，水平和垂直方向的步长均被设置为图像块大小的四分之一。我们将在下一章进一步讨论步长。<br />
+内核聚类步骤采用的是均值漂移聚类算法，其中距离测度为两内核间的平方差纸盒，带宽设置为4.5，这些是由经验决定的。带宽值对实验结果的影响将在第5章中给出。核估计的参数是按照文献[11]中的推荐参数设定的；图像反卷积的参数使用的是文献[36]中的推荐参数。对于图像融合，局部窗口大小设置为模糊核的大小，正则化常数<span class="math inline">\(\alpha\)</span>设置为10。一旦参数确定，所有实验中的参数值都保持不变。<br />
+在图3中，输入图像中有至少两个不同方向上的离焦模糊核运动模糊，如图2中的模糊内核块所示。可见例如文献[11]中的这种为空间不变模糊所设计的方法，无法处理这种类型的图像。专为离焦模糊设计的方法，如文献[23]中所提到的，也无法解决运动模糊。在这些情况想，本文所提出的方法效果最好。因当注意的是，本文提出的方法的内核改进是基于文献[11]的，当模糊是空间不变时，它确实能产生非常好的结果，但是在本例中所看到的其他情况都不甚理想。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634918_20200202165733725_12987.png" alt="图 3 空变图像去模糊的比较" /><br />
+图4中的输入是由于相机抖动而产生的模糊；其场景也是非平面的。输入图像来自于文献[2]。结果表明，该方法笔文献[2]和文献[34]中的方法更有效。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634920_20200202165849046_3112.png" alt="图 4 空变图像去模糊方法的比较 数据来源：输入图像取自文献2" /><br />
+图5中的输入具有不同深度的对象，并存在一些运动模糊，但相比图4较少。输入图像来自于文献[3]。与文献[3]和[34]中的方法相比，该方法产生的结果最清晰。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634921_20200202165934678_28641.png" alt="图 5 空变图像去模糊方法的比较 数据来源：输入图像取自文献3" /><br />
+图6中的输入图像来自于文献[30]。将该方法与文献[4,30]和文献[34]。从不同的特征(close-up 特写)区域来看，该方法总体上具有更好的恢复能力。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634923_20200202165952380_21862.png" alt="图 6 空变图像去模糊方法的比较 数据来源：输入图像取自文献4" /><br />
+今年来开发出的基于卷积神经网络(CNN)的方法处理空变模糊是可以得到出色的结果。图7-图9中的输入图像来自于文献[5]，该文献提出了一种基于CNN的空变去模糊方法。在这些图片中，我们还包括了文献[29]和文献[33]中方法的结果，它们也是为了消除空变模糊而设计的。对这些结果进行评估，该方法与基于CNN的方法相比，产生了更好或类似的效果。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634923_20200202170008578_4282.png" alt="图 7 空变图像去模糊方法的比较 数据来源：输入图像取自文献5" /><br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634924_20200202170035466_322.png" alt="图 8 空变图像去模糊方法的比较 数据来源：输入图像取自文献5" /><br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634925_20200202170053867_21901.png" alt="图 9 空变图像去模糊方法的比较 数据来源：输入图像取自文献5" /><br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634926_20200202170121842_32438.png" alt="图 10 空变图像去模糊方法的比较 数据来源：输入图像取自文献6" /><br />
+最后，我们将文献[5]和[33]中基于CNN的方法与本文方法进行定量比较。数据集取自文献[6]，其提供了对应的真实图像。在表1中，我们列出了具有不同模糊量的图像的峰值信号比(PSNR)和结构相似性(SSIM)值。有关数据集的更多信息，可见文献[6]。在图10中，我们提供了来自该数据集的视觉比较示例。<br />
+可以看出，虽然一些方法是针对各种特定类型的模糊情况而设计的，但所提出的方法可以处理各种模糊情况，并产生能与其他方法相媲美甚至更好的结果，即使在所比较方法是专门针对这种情况设计的时候也是如此。</p>
+<h1 id="讨论">5. 讨论</h1>
+<p>本文提出的框架设计多个步骤，在表2中，我们提供了每个步骤的详细计算时间。由于集群的数量和集群区域的大小取决于输入图像，因此整个过程的时间不固定。在表格中，我们提供了当输入的图像数据集尺寸为1248x1872时的平均计算时间（运行10次）。每次运行过程中图像块的大小为312x208，步长设置为图像块大小的四分之一。实验是在装有 Intel Xeon(R) CPU <span class="citation" data-cites="3.50GHz">@3.50GHz</span> 和4.7GB内存的计算机上完成的。需要注意的是，某些步骤可以很容易的并行化：可以并行处理图像块以获得初始模糊内核、可以并行完成每个集群的内核优化、可以并行完成每个内核的图像去模糊。如果没有利用可能的并行化，则计算时间将变得很长。以大小为1248x1872的图像为例，按照所设定的图像块大小和步长将有400个图像块。如果按顺序对图像块进行内核估计，则所有补丁的时间将变为4s x 400 = 1600s，大约27分钟。在这种情况下，总时间约为半小时。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Computational cost</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Algorithm step</td>
+<td style="text-align: center;">Average time</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Image patch blur kernel estimation</td>
+<td style="text-align: center;">4 s per patch</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Kernel clustering</td>
+<td style="text-align: center;">2 s</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Kernel refinement</td>
+<td style="text-align: center;">6 s per image</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Image deblurring</td>
+<td style="text-align: center;">70 s per image</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Image fusion</td>
+<td style="text-align: center;">26 s</td>
+</tr>
+</tbody>
+</table>
+<p>如前文所述，本文提出的框架非常灵活，可以适应在不同步骤中使用的技术的变化。聚类、核估计、去模糊或融合技术可以用其他方法替代。这些方法的参数可以通过微调以获得最佳的整体性能。对于本文中的所有试验，我们均使用了一组固定的参数。这些参数是通过试验评价确定的。在此，我们将进一步讨论这些参数对性能的影响。其中一个关键参数是图像块大小。当其太小时，可能没有足够的图像特征来获得可靠的模糊核；当其太大时，很难获得只有一种类型模糊的图像补丁。在图11中，我们比较了三种不同的图像块大小。我们选择的图像块大小为312x208，其可以在每个簇内产生足够大的具有均匀模糊的簇区域。较小的图像块会导致很多小的簇区域，而较大的图像块会导致包含多种类型模糊的较大簇区域；在这两种情况下，去模糊的性能均会降低。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634927_20200202170412149_2573.png" alt="图 11 图像块大小对聚类和最终去模糊的影响。其显示了在不同图像块大小下的聚类区域和去模糊图像。在每种情况下，步长是图像块大小的1/4。" /><br />
+第二个关键参数是步长，其表示从一个图像块到另一个图像块间的位移。在极端情况下，步长可以设置为一个像素；这将增加图像块的数量（因此也会增加估计模糊核的数量），并且我们期望具有更可靠的内核聚类。其缺点是计算成本会增加，因为必须估计每个图像块的模糊内核。随着步长的增加，我们会发现其性能会因内核数的减少和丢失均匀和区域的概率增加而下降。在图12中，我们比较了步长设置为四分之一或二分之一的图像块大小。我们可以看到，较大的步长（图像块大小的二分之一）会使得最终的去模糊图像中有明显的人工痕迹。表3提供了对文献[6]中一组图像上不同图像块大小和步长数量的定量比较；这些定量结果与视觉观察结果一致。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634928_20200202170436285_10431.png" alt="图 12 步长对聚类和最终去模糊的影响。每种情况下图像块的大小为312x208。" /></p>
+<table>
+<tr>
+<td rowspan="3">
+Image name
+</td>
+<td colspan="2">
+Patch size=240×156
+</td>
+<td colspan="2">
+Patch size=312×208
+</td>
+<td colspan="2">
+Patch size=312×208
+</td>
+<td colspan="2">
+Patch size=468×312
+</td>
+</tr>
+<tr>
+<td colspan="2">
+Stride=Patch size/4
+</td>
+<td colspan="2">
+Stride=Patch size/4
+</td>
+<td colspan="2">
+Stride=Patch size/2
+</td>
+<td colspan="2">
+Stride=Patch size/4
+</td>
+</tr>
+<tr>
+<td>
+PSNR
+</td>
+<td>
+SSIM
+</td>
+<td>
+PSNR
+</td>
+<td>
+SSIM
+</td>
+<td>
+PSNR
+</td>
+<td>
+SSIM
+</td>
+<td>
+PSNR
+</td>
+<td>
+SSIM
+</td>
+</tr>
+<tr>
+<td>
+People 01
+</td>
+<td>
+32.04
+</td>
+<td>
+0.95
+</td>
+<td>
+31.09
+</td>
+<td>
+0.96
+</td>
+<td>
+32.04
+</td>
+<td>
+0.95
+</td>
+<td>
+32.04
+</td>
+<td>
+0.95
+</td>
+</tr>
+<tr>
+<td>
+People 02
+</td>
+<td>
+26.65
+</td>
+<td>
+0.9
+</td>
+<td>
+27.44
+</td>
+<td>
+0.92
+</td>
+<td>
+26.65
+</td>
+<td>
+0.9
+</td>
+<td>
+27.12
+</td>
+<td>
+0.92
+</td>
+</tr>
+<tr>
+<td>
+People 03
+</td>
+<td>
+24.32
+</td>
+<td>
+0.86
+</td>
+<td>
+34.1
+</td>
+<td>
+0.98
+</td>
+<td>
+31.93
+</td>
+<td>
+0.95
+</td>
+<td>
+31.93
+</td>
+<td>
+0.95
+</td>
+</tr>
+<tr>
+<td>
+People 04
+</td>
+<td>
+18.53
+</td>
+<td>
+0.63
+</td>
+<td>
+32.37
+</td>
+<td>
+0.96
+</td>
+<td>
+31.23
+</td>
+<td>
+0.95
+</td>
+<td>
+31.23
+</td>
+<td>
+0.95
+</td>
+</tr>
+<tr>
+<td>
+Average
+</td>
+<td>
+25.38
+</td>
+<td>
+0.83
+</td>
+<td>
+31.25
+</td>
+<td>
+0.96
+</td>
+<td>
+30.46
+</td>
+<td>
+0.93
+</td>
+<td>
+30.58
+</td>
+<td>
+0.94
+</td>
+</tr>
+</table>
+<p>另一个重要的参数是均值漂移聚类带宽。当带宽太大时，不同类型的内核将连接在一起；当带宽太小时，内核（即使来自同一类型的模糊）便无法分组，而且某些模糊类型可能被跳过。在图13中，我们提供了不同带宽值的结果；我们看到4.5的带宽值与其他值相比产生了较好的结果。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634929_20200202171023053_19194.png" alt="图 13 均值漂移聚类带宽对去类和最终去模糊的影响" /><br />
+最后，我们探究了和聚类中的初始点对性能是否有影响。我们随机选择种子点，并重复该过程十次。与我们预期的一样，不同的种子点可能会导致集群的稍有不同；然而，这不会导致最终去模糊图像中有任何重大变化。如图14所示。<br />
+<img src="https://gitee.com/Sweetmile/imagehost/raw/master/1580634930_20200202171038697_26633.png" alt="图 14 聚类种子点随机选择对聚类收敛和最终去模糊的影响。(a)中的结果在10次运行中的第7次获得；(b)中的结果在10次运行中的第3次获得。" /></p>
+<h1 id="结论">6. 结论</h1>
+<p>本文提出了一种适用于空变模糊的盲图像去模糊方法。该方法可以处理任何类型的空变模糊，而无需对摄像机或物体的运动进行任何参数化假设。该方法将图像分割成重叠的图像块，并估计每个图像块中的模糊核。然后对估计的内核进行聚类以找到主模糊核和对应的区域。某些图像区域可能仍然为分配给集群。对于每个聚类区域，模糊核都将进行优化。然后用每个改进后的模糊核对输入图像进行去模糊处理。图像的融合过程将这些去模糊图像合并为一个单独的图像，使用能量函数选择最佳像素。尽管我们为每个步骤提供了一组特定的技术，但是该框架可以与其他技术和参数选择一起使用，从而有可能在将来进行改进。将该方法与其他各种空变的去模糊方法进行了比较；并在各种模糊情况下产生可以媲美或更好的效果，包括相机抖动、离焦模糊和对象运动。</p>
+<h1 id="参考文献">参考文献</h1>
+<p>[1] B.K. Gunturk, X. Li, Image Restoration: Fundamentals and Advances, CRC Press, Boca Raton, FL, 2012.<br />
+[2] M. Hirsch, C.J. Schuler, S. Harmeling, B. Schölkopf, Fast removal of non-uniform camera shake, IEEE Int. Conf. Comput. Vis. 463–470 (2011).<br />
+[3] Z. Hu, L. Xu, M.H. Yang, Joint depth estimation and camera shake removal from single blurry image, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 2893–2900, 2014.<br />
+[4] N. Joshi, S.B. Kang, C.L. Zitnick, R. Szeliski, Image deblurring using inertial measurement sensors, ACM Trans. Graph. 29 (2010).<br />
+[5] S. Nah, H.T. Kim, K.M. Lee, Deep multi-scale convolutional neural network for dynamic scene deblurring, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 3883–3891, 2017.<br />
+[6] W.S. Lai, J.B. Huang, Z. Hu, N. Ahuja, M.H. Yang, A comparative study for single image blind deblurring, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, 2016, pp. 1701–1709.<br />
+[7] R. Fergus, B. Singh, A. Hertzmann, W.T. Freeman, Removing camera shake from a single photograph, ACM Trans. Graph. 25 (2006) 787–794.<br />
+[8] Q. Shan, J. Jia, A. Agarwala, High-quality motion deblurring from a single image, ACM Trans. Graph. 27 (2008) 1–10.<br />
+[9] N. Joshi, R. Szeliski, D.J. Kriegman, PSF estimation using sharp edge prediction, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 1–8, 2008.<br />
+[10] S. Cho, S. Lee, Fast motion deblurring, ACM Trans. Graph. 28 (2009) 145:1–145:8.<br />
+[11] L. Xu, J.Y. Jia, Two-phase kernel estimation for robust motion deblurring, European Conf. Comput. Vis. 6311 (2010) 157–170.<br />
+[12] J. Cai, H. Ji, C. Liu, Z. Shen, Blind motion deblurring from a single image using sparse approximation, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 104–111, 2009.<br />
+[13] J. Chen, L. Yuan, C.K. Tang, L. Quan, Robust dual motion deblurring, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 1–8, 2008.<br />
+[14] F. Li, J.Y. Yu, J.X. Chai, A hybrid camera for motion deblurring and depth map super-resolution, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 1–8, 2008.<br />
+[15] L. Yuan, J. Sun, L. Quan, H.Y. Shum, Image deblurring with blurred/noisy image pairs, ACM Trans. Graph. 26 (2007).<br />
+[16] O. Whyte, J. Sivic, A. Zisserman, J. Ponce, Non-uniform deblurring for shaken images, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 98, 2010, pp. 168–186.<br />
+[17] A. Gupta, N. Joshi, C.L. Zitnick, M. Cohen, B. Curless, Single image deblurring using motion density functions, European Conf. Comput. Vis. 6311 (2010) 171–184.<br />
+[18] O. Šindelář, F. Šroubek, Image deblurring in smartphone devices using built-in inertial measurement sensors, J. Electron. Imaging 22 (2013).<br />
+[19] Q. Shan, W. Xiong, J.Y. Jia, Rotational motion deblurring of a rigid object from a single image, IEEE Int. Conf. Comput. Vis. 1–8 (2007).<br />
+[20] J. Jia, Single image motion deblurring using transparency, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, 2007.<br />
+[21] Y.W. Tai, H.X. Tang, M.S. Brown, S. Lin, Detail recovery for single image defocus blur, Trans. Comput. Vis. Appl. 1 (2009) 95–104.<br />
+[22] Y.W. Tai, M.S. Brown, Single image defocus map estimation using local contrast prior, IEEE Int. Conf. Image Process. 1797–1800 (2009).<br />
+[23] C.T. Shen, W.L. Hwang, S.C. Pei, Spatially-varying out-of-focus image deblurring with L1-2 optimization and a guided blur map, in: IEEE Int. Conf. on Acoustics, Speech, and Signal Processing, Vol. 1069–1072, 2012.<br />
+[24] H. Cheong, E. Chae, E. Lee, G. Jo, J. Paik, Fast image restoration for spatially-varying defocus blur of imaging sensor, Sensors 15 (2015) 880–898.<br />
+[25] A. Levin, R. Fergus, F. Durand, W.T. Freeman, Image and depth from a conventional camera with a coded aperture, ACM Trans. Graph. 26 (2007) 1–9.<br />
+[26] R. Liu, Z. Li, J. Jia, Image partial blur detection and classification, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 1–8, 2008.<br />
+[27] A. Chakrabarti, T. Zickler, W.T. Freeman, Analyzing spatially-varying blur, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 2512–2519, 2010.<br />
+[28] A. Levin, Blind motion deblurring using image statistics, Adv. Neural Inf. Process. Syst. 841–848 (2006).<br />
+[29] T.H. Kim, K.M. Lee, Segmentation-free dynamic scene deblurring, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 2766–2773, 2014.<br />
+[30] Z. Shen, T. Xu, J. Pan, J. Guo, Non-uniform motion deblurring with kernel grid regularization signal process, Signal Process., Image Commun. 62 (2018) 1–15.<br />
+[31] S. Harmeling, H. Michael, B. Schoelkopf, Space-variant single image blind deconvolution for removing camera shake, Adv. Neural Inf. Process. Syst. 1 (2010) 829–837.<br />
+[32] H. Ji, K. Wang, A two-stage approach to blind spatially-varying motion deblurring, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 73–80, 2012.<br />
+[33] J. Sun, W. Cao, Z. Xu, Ponce, Learning a convolutional neural network for non-uniform motion blur removal, in: IEEE Int. Conf. on Computer Vision and Pattern Recognition, Vol. 769–777, 2015.<br />
+[34] Q. Qian, B.K. Gunturk, Space-varying blur kernel estimation and image deblurring, IS&amp;T/SPIE Electron. Imaging 9023 (2014).<br />
+[35] Y. Cheng, Mean shift, mode seeking, and clustering, IEEE Trans. Pattern Anal. Mach. Intell. 17 (1995) 790–799.<br />
+[36] J.F. Wang, Y. Zhang, W.T. Yin, An efficient TVL1 algorithm for deblurring multi-channel images corrupted by impulsive noise, J. Sci. Comput. 31 (2009) 2842–2865.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.xyzhao.com/2020/02/05/Hello-world,Hello-Hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xyzhao">
+      <meta itemprop="description" content="xyzhao@xyzhao.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xyzhao's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/05/Hello-world,Hello-Hexo/" class="post-title-link" itemprop="url">Hello World, Hello Hexo</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-05 17:59:15 / 修改时间：18:22:16" itemprop="dateCreated datePublished" datetime="2020-02-05T17:59:15+08:00">2020-02-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/02/05/Hello-world,Hello-Hexo/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/05/Hello-world,Hello-Hexo/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>35</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>没错我又来了[捂脸] 新年的第一个flag，看这次能坚持多久吧[捂脸]。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Xyzhao</p>
+  <div class="site-description" itemprop="description">xyzhao@xyzhao.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3h5emhhbzE5OTk=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xyzhao1999"><i class="fa fa-fw fa-github"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnh5emhhb0B4eXpoYW8uY29t" title="E-Mail → mailto:xyzhao@xyzhao.com"><i class="fa fa-fw fa-envelope"></i></span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9nb29nbGUuY29t" title="https:&#x2F;&#x2F;google.com">Google</span>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="beian"><span class="exturl" data-url="aHR0cDovL3d3dy5iZWlhbi5taWl0Lmdvdi5jbg==">湘ICP备19026003号-1 </span>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xyzhao</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">15k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">14 分钟</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/fancybox@3/dist/js/jquery.fancybox.pack.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+  <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js"></script>
+    <script defer src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+    MathJax.Ajax.config.path['mhchem'] = '//cdn.jsdelivr.net/npm/mathjax-mhchem@3';
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        extensions: ['[mhchem]/mhchem.js'],
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el: '#valine-comments',
+      verify: true,
+      notify: false,
+      appId: '8BnfUXXzEYA8KKoDUBi7ohOz-gzGzoHsz',
+      appKey: 'uWsMM4T61cDznnHdSU1vlmdk',
+      placeholder: "Just go go",
+      avatar: 'mm',
+      meta: guest,
+      pageSize: '10' || 10,
+      visitor: false,
+      lang: 'zh-cn' || 'zh-cn',
+      path: location.pathname,
+      recordIP: false,
+      serverURLs: ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
